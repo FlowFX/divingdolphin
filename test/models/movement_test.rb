@@ -15,7 +15,7 @@ class MovementTest < ActiveSupport::TestCase
     @movement.name = nil
 
     refute @movement.valid?
-    assert_not_nil @movement.errors[:name]
+    assert_not_empty @movement.errors[:name]
   end
 
   # Associations

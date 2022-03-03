@@ -15,7 +15,7 @@ class PerformanceTest < ActiveSupport::TestCase
     @performance.date = nil
 
     refute @performance.valid?
-    assert_not_nil @performance.errors[:date]
+    assert_not_empty @performance.errors[:date]
   end
 
   # Associations

@@ -15,14 +15,14 @@ class ExerciseTest < ActiveSupport::TestCase
     @exercise.sets = 0
 
     refute @exercise.valid?
-    assert_not_nil @exercise.errors[:sets]
+    assert_not_empty @exercise.errors[:sets]
   end
 
   test 'invalid with zero reps' do
     @exercise.repetitions = 0
 
     refute @exercise.valid?
-    assert_not_nil @exercise.errors[:repetitions]
+    assert_not_empty @exercise.errors[:repetitions]
   end
 
   # Associations
