@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MovementsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @movement = movements(:one)
+    @movement = Movement.create(name: 'Box jump')
   end
 
   test 'should get index' do
