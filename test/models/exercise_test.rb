@@ -33,4 +33,11 @@ class ExerciseTest < ActiveSupport::TestCase
   test 'has many performances' do
     assert_respond_to @exercise, :performances
   end
+
+  test 'cannot delete if performances exist' do
+    create(:performance, exercise: @exercise)
+
+    refute @exercise.destroy
+    assert_not_empty @exercise.errors[:base]
+  end
 end
