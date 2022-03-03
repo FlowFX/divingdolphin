@@ -89,9 +89,6 @@ GEM
     io-wait (0.2.1)
     irb (1.4.1)
       reline (>= 0.3.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     loofah (2.14.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -215,7 +212,6 @@ DEPENDENCIES
   bootsnap
   debug
   importmap-rails
-  jbuilder
   pg (~> 1.1)
   propshaft
   puma (~> 5.0)
