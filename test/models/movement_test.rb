@@ -10,10 +10,20 @@ class MovementTest < ActiveSupport::TestCase
     assert @movement.save
   end
 
+  # Validations
   test 'invalid without name' do
     @movement.name = nil
 
     refute @movement.valid?
     assert_not_nil @movement.errors[:name]
+  end
+
+  # Associations
+  test 'has many exercises' do
+    assert_respond_to @movement, :exercises
+  end
+
+  test 'has many performances through exercises' do
+    assert_respond_to @movement, :performances
   end
 end

@@ -10,6 +10,7 @@ class ExerciseTest < ActiveSupport::TestCase
     assert @exercise.save
   end
 
+  # Validations
   test 'invalid with zero sets' do
     @exercise.sets = 0
 
@@ -22,5 +23,14 @@ class ExerciseTest < ActiveSupport::TestCase
 
     refute @exercise.valid?
     assert_not_nil @exercise.errors[:repetitions]
+  end
+
+  # Associations
+  test 'has one movement' do
+    assert_respond_to @exercise, :movement
+  end
+
+  test 'has many performances' do
+    assert_respond_to @exercise, :performances
   end
 end
