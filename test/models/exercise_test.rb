@@ -2,11 +2,7 @@ require 'test_helper'
 
 class ExerciseTest < ActiveSupport::TestCase
   def setup
-    @exercise = Exercise.new(
-      movement: Movement.new(name: 'Pull-up'),
-      sets: 5,
-      repetitions: 1
-    )
+    @exercise = build(:exercise)
   end
 
   test 'can save valid exercise' do

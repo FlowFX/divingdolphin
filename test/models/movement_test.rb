@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MovementTest < ActiveSupport::TestCase
   def setup
-    @movement = Movement.new(name: 'Pull-up', abbreviation: 'PLU')
+    @movement = build(:movement)
   end
 
   test 'can save valid movement' do

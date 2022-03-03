@@ -2,11 +2,7 @@ require 'test_helper'
 
 class ExercisesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @exercise = Exercise.create(
-      movement: Movement.create(name: 'Pull-up'),
-      sets: 5,
-      repetitions: 1
-    )
+    @exercise = create(:exercise)
   end
 
   test 'should get index' do
