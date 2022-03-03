@@ -26,4 +26,11 @@ class MovementTest < ActiveSupport::TestCase
   test 'has many performances through exercises' do
     assert_respond_to @movement, :performances
   end
+
+  test 'cannot delete if exercises exist' do
+    create(:exercise, movement: @movement)
+
+    refute @movement.destroy
+    assert_not_empty @movement.errors[:base]
+  end
 end
