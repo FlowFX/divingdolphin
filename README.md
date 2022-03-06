@@ -1,24 +1,5 @@
-# README
+# Diving dolphin
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A training log.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![Depfu](https://badges.depfu.com/badges/cf6309408605d91f15f9ef7696550cfe/status.svg)](https://depfu.com)
