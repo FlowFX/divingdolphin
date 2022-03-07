@@ -52,9 +52,6 @@ group :development, :test do
   # FactoryBot
   gem 'factory_bot_rails'
 
-  # Code coverage
-  gem 'simplecov', require: false
-
   # Code linting
   gem 'rubocop', require: false
   gem 'rubocop-minitest', require: false
@@ -67,4 +64,10 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
+end
+
+group :test do
+  # Code coverage
+  gem 'codecov', require: false
+  gem 'simplecov', require: false
 end

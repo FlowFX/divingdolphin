@@ -28,3 +28,8 @@ jobs:
         run: bin/rails assets:precompile
       - name: Run tests
         run: bin/rails test
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          files: ./coverage/codecov-result.json
+          fail_ci_if_error: false
