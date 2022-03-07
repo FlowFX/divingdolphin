@@ -1,4 +1,17 @@
+require 'simplecov'
+SimpleCov.start do
+  enable_coverage :branch
+
+  add_filter %r{^/config/}
+  add_filter %r{^/test/}
+
+  add_group 'Models', 'app/models'
+  add_group 'Helpers', 'app/helpers'
+  add_group 'Controllers', 'app/controllers'
+end
+
 ENV['RAILS_ENV'] ||= 'test'
+
 require_relative '../config/environment'
 require 'rails/test_help'
 

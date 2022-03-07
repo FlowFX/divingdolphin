@@ -51,6 +51,9 @@ group :development, :test do
 
   # FactoryBot
   gem 'factory_bot_rails'
+
+  # Code coverage
+  gem 'simplecov', require: false
 end
 
 group :development do
