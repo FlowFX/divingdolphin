@@ -10,8 +10,10 @@ SimpleCov.start do
   add_group 'Controllers', 'app/controllers'
 end
 
-require 'codecov'
-SimpleCov.formatter = SimpleCov::Formatter::Codecov
+if ENV['CI'] == 'true'
+  require 'codecov'
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
+end
 
 ENV['RAILS_ENV'] ||= 'test'
 
