@@ -54,6 +54,11 @@ group :development, :test do
 
   # Code coverage
   gem 'simplecov', require: false
+
+  # Code linting
+  gem 'rubocop', require: false
+  gem 'rubocop-minitest', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
@@ -62,10 +67,4 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # rubocop
-  gem 'rubocop', require: false
-  gem 'rubocop-minitest', require: false
-  gem 'rubocop-rails', require: false
 end
