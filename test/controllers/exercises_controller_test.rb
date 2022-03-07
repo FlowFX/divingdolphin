@@ -25,6 +25,11 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to exercise_url(Exercise.last)
   end
 
+  test 'should return 422 if create fails' do
+    post exercises_url, params: { exercise: { movement_id: nil } }
+    assert_response :unprocessable_entity
+  end
+
   test 'should show exercise' do
     get exercise_url(@exercise)
     assert_response :success
@@ -40,6 +45,11 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
           params: { exercise: { movement_id: @exercise.movement_id, sets: @exercise.sets,
                                 unit: @exercise.repetitions } }
     assert_redirected_to exercise_url(@exercise)
+  end
+
+  test 'should return 422 if update fails' do
+    patch exercise_url(@exercise), params: { exercise: { movement_id: nil } }
+    assert_response :unprocessable_entity
   end
 
   test 'should destroy exercise' do

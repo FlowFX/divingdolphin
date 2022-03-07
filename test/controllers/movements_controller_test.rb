@@ -23,6 +23,11 @@ class MovementsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to movement_url(Movement.last)
   end
 
+  test 'should return 422 if create fails' do
+    post movements_url, params: { movement: { name: nil } }
+    assert_response :unprocessable_entity
+  end
+
   test 'should show movement' do
     get movement_url(@movement)
     assert_response :success
@@ -36,6 +41,11 @@ class MovementsControllerTest < ActionDispatch::IntegrationTest
   test 'should update movement' do
     patch movement_url(@movement), params: { movement: { abbreviation: @movement.abbreviation, name: @movement.name } }
     assert_redirected_to movement_url(@movement)
+  end
+
+  test 'should return 422 if update fails' do
+    patch movement_url(@movement), params: { movement: { name: nil } }
+    assert_response :unprocessable_entity
   end
 
   test 'should destroy movement' do
