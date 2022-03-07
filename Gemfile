@@ -7,7 +7,7 @@ ruby '3.1.1'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
-gem 'propshaft'
+gem 'propshaft', '~> 0.6.4'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -16,16 +16,16 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails'
+gem 'importmap-rails', '~> 1.0.3'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails'
+gem 'turbo-rails', '~> 1.0.1'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
+gem 'stimulus-rails', '~> 1.0.4'
 
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-gem 'tailwindcss-rails'
+gem 'tailwindcss-rails', '~> 2.0.7'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem 'jbuilder'
@@ -40,7 +40,7 @@ gem 'tailwindcss-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
+gem 'bootsnap', '~> 1.10.3', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -50,12 +50,12 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 
   # FactoryBot
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '~> 6.2.0'
 
   # Code linting
-  gem 'rubocop', require: false
-  gem 'rubocop-minitest', require: false
-  gem 'rubocop-rails', require: false
+  gem 'rubocop', '~> 1.25.1', require: false
+  gem 'rubocop-minitest', '~> 0.17.2', require: false
+  gem 'rubocop-rails', '~> 2.13.2', require: false
 end
 
 group :development do
@@ -68,6 +68,6 @@ end
 
 group :test do
   # Code coverage
-  gem 'codecov', require: false
-  gem 'simplecov', require: false
+  gem 'codecov', '~> 0.6.0', require: false
+  gem 'simplecov', '~> 0.21.2', require: false
 end
