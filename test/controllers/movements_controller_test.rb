@@ -3,6 +3,8 @@ require 'test_helper'
 class MovementsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @movement = create(:movement)
+
+    sign_in users(:kathrin)
   end
 
   test 'should get index' do
