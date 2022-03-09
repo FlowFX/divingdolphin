@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :exercises
   resources :movements
+  resources :performances
 end
