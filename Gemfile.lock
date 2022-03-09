@@ -88,6 +88,10 @@ GEM
       warden (~> 1.2.3)
     digest (3.1.0)
     docile (1.4.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -130,6 +134,7 @@ GEM
       digest
       net-protocol
       timeout
+    newrelic_rpm (8.5.0)
     nio4r (2.5.8)
     nokogiri (1.13.3-x86_64-darwin)
       racc (~> 1.4)
@@ -247,8 +252,10 @@ DEPENDENCIES
   codecov (~> 0.6.0)
   debug
   devise
+  dotenv-rails (~> 2.7.2)
   factory_bot_rails (~> 6.2.0)
   importmap-rails (~> 1.0.3)
+  newrelic_rpm (~> 8.5.0)
   pg (~> 1.1)
   propshaft (~> 0.6.4)
   puma (~> 5.0)
