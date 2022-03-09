@@ -7,6 +7,11 @@ AllCops:
     - 'db/schema.rb'
     - 'Rakefile'
 
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmethodlength
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*.rb'
+
 # https://docs.rubocop.org/rubocop/cops_style.html#styledocumentation
 Style/Documentation:
   Enabled: false

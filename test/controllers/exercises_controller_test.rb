@@ -3,6 +3,8 @@ require 'test_helper'
 class ExercisesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @exercise = create(:exercise)
+
+    sign_in users(:kathrin)
   end
 
   test 'should get index' do

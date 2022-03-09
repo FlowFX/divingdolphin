@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "movements#index"
+  devise_for :users
+
+  root "home#index"
 
   resources :exercises
   resources :movements
