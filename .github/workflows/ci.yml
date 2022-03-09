@@ -45,3 +45,5 @@ jobs:
           bundler-cache: true
       - name: Run RuboCop
         run: bundle exec rubocop --parallel
+      - name: Run brakeman
+        run: bundle exec brakeman

@@ -71,6 +71,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.10.3)
       msgpack (~> 1.2)
+    brakeman (5.2.1)
     builder (3.2.4)
     codecov (0.6.0)
       simplecov (>= 0.15, < 0.22)
@@ -242,6 +243,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (~> 1.10.3)
+  brakeman (~> 5.2.1)
   codecov (~> 0.6.0)
   debug
   devise
