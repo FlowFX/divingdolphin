@@ -9,4 +9,8 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
     assert @user.save
   end
+
+  test 'has performances' do
+    assert_respond_to @user, :performances
+  end
 end

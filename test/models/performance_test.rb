@@ -19,8 +19,18 @@ class PerformanceTest < ActiveSupport::TestCase
   end
 
   # Associations
-  test 'has one exercise' do
-    assert_respond_to @performance, :exercise
+  test 'requires an exercise' do
+    @performance.exercise = nil
+
+    refute @performance.valid?
+    assert_not_empty @performance.errors[:exercise]
+  end
+
+  test 'requires a user' do
+    @performance.user = nil
+
+    refute @performance.valid?
+    assert_not_empty @performance.errors[:user]
   end
 
   test 'has one movement via exercise' do
