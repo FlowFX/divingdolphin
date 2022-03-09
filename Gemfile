@@ -59,6 +59,9 @@ group :development, :test do
   gem 'rubocop', '~> 1.25.1', require: false
   gem 'rubocop-minitest', '~> 0.17.2', require: false
   gem 'rubocop-rails', '~> 2.13.2', require: false
+
+  # Code analysis
+  gem 'brakeman', '~> 5.2.1', require: false
 end
 
 group :development do
