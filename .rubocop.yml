@@ -6,6 +6,7 @@ AllCops:
     - 'config.ru'
     - 'db/schema.rb'
     - 'Rakefile'
+    - 'vendor/bundle/**/*'
 
 # https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmethodlength
 Metrics/MethodLength:
