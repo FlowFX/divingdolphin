@@ -3,5 +3,5 @@ class Movement < ApplicationRecord
   has_many :performances, through: :exercises
 
   validates :name, presence: true, uniqueness: true
-  validates :abbreviation, uniqueness: true
+  validates :abbreviation, uniqueness: { allow_blank: true }
 end
