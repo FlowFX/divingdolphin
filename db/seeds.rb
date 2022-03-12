@@ -7,3 +7,14 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 User.create(email: 'florian@divingdolphin.com', password: 'password!!')
+
+[
+  %w[Pull-up PLU],
+  ['Kettlebell Clean & Press', 'KB C&P'],
+  ['Hang power snatch', 'HPSN']
+].each do |m|
+  movement = Movement.new(name: m[0], abbreviation: m[1])
+
+  # If the movement name or abbreviation is already taken, then save simply fails.
+  movement.save
+end

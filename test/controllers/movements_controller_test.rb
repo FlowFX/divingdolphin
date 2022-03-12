@@ -19,7 +19,7 @@ class MovementsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create movement' do
     assert_difference('Movement.count') do
-      post movements_url, params: { movement: { abbreviation: @movement.abbreviation, name: @movement.name } }
+      post movements_url, params: { movement: { name: 'Run' } }
     end
 
     assert_redirected_to movement_url(Movement.last)
