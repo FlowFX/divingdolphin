@@ -15,6 +15,6 @@ The second purpose of this repository is to give me a playground for all things 
 - [At work](https://ioki.com/api/), we use RSpec, but I want to play with Minitest.
 - I've used Bootstrap a lot, but Tailwind sounds so nice!
 - [ViewComponents](https://viewcomponent.org/) are really, really cool.
-- I don't need NewRelic for this, but I want to know what it can do for me.
+- I don't need NewRelic, but I want to know what it can do for me.
 - I've never set up a GitHub Actions workflow before.
 - And though a 100% test coverage is not a sign of good software quality, I want to see how long I can keep it up there.
