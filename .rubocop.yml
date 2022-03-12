@@ -8,6 +8,10 @@ AllCops:
     - 'Rakefile'
     - 'vendor/bundle/**/*'
 
+# https://docs.rubocop.org/rubocop/cops_lint.html#lintmissingsuper
+Lint/MissingSuper:
+  Enabled: false
+
 # https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmethodlength
 Metrics/MethodLength:
   Exclude:
