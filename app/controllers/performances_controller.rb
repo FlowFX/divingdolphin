@@ -10,9 +10,11 @@ class PerformancesController < ApplicationController
   end
 
   def create
-    @performance = Performance.new(performance_params.merge(user_id: current_user.id))
+    result = CreatePerformance.result(params: performance_params, user: current_user)
 
-    if @performance.save
+    @performance = result.object
+
+    if result.success?
       redirect_to performance_url(@performance), notice: 'Performance was successfully created'
     else
       render :new, status: :unprocessable_entity
@@ -28,6 +30,6 @@ class PerformancesController < ApplicationController
   end
 
   def performance_params
-    params.require(:performance).permit(:exercise_id, :date)
+    params.require(:performance).permit(:exercise_id, :movement_id, :sets, :repetitions, :date)
   end
 end
