@@ -1,0 +1,5 @@
+<%= simple_form_for @performance do |f| %>
+  <%= f.association :exercise %>
+  <%= f.input :date %>
+  <%= f.button :submit %>
+<% end %>
