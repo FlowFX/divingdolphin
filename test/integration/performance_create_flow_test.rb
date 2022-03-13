@@ -14,6 +14,14 @@ class PerformanceCreateFlowTest < ActionDispatch::IntegrationTest
     get '/performances/new'
     assert_response :success
 
-    # TODO: continue with https://guides.rubyonrails.org/testing.html#creating-articles-integration
+    # Given an existing exercise
+    exercise = create(:exercise, sets: 5, repetitions: 10)
+
+    post '/performances',
+         params: { performance: { exercise_id: exercise.id, date: Date.today } }
+    assert_response :redirect
+
+    follow_redirect!
+    assert_response :success
   end
 end

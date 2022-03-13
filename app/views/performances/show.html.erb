@@ -1,0 +1,15 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <%= render @performance %>
+
+    <%= render(ButtonComponent.new(url: edit_performance_path(@performance))) { 'Edit this performance' } %>
+    <div class="inline-block ml-2">
+      <%= render(ButtonComponent.new(url: performance_path(@performance), method: :delete)) { 'Destroy this performance' } %>
+    </div>
+    <%= render(ButtonComponent.new(url: performances_path)) { 'Back to performances' } %>
+  </div>
+</div>
