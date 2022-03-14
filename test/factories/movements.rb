@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :movement do
-    name { 'Pull-up' }
+    sequence(:name) { |n| "movement-#{n}" }
   end
 end
