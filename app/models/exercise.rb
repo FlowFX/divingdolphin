@@ -5,4 +5,6 @@ class Exercise < ApplicationRecord
 
   validates :sets, numericality: { greater_than: 0, allow_blank: true }
   validates :repetitions, numericality: { greater_than: 0, allow_blank: true }
+
+  validates :movement, uniqueness: { scope: %i[sets repetitions] }
 end
