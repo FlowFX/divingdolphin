@@ -75,6 +75,9 @@ group :development, :test do
 
   # Code analysis
   gem 'brakeman', '~> 5.2.1', require: false
+
+  # Application preloading for TDD
+  gem 'spring', '~> 4.0.0', require: false
 end
 
 group :development do
