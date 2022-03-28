@@ -9,9 +9,16 @@
 User.create(email: 'florian@divingdolphin.com', password: 'password!!')
 
 [
-  %w[Pull-up PLU],
+  ['Box jump'],
+  ['Hang power clean', 'HPCL'],
+  ['Hang power snatch', 'HPSN'],
   ['Kettlebell Clean & Press', 'KB C&P'],
-  ['Hang power snatch', 'HPSN']
+  ['Kettlebell Snatch', 'KB SN'],
+  ['Kettlebell Swing', 'KB Sw'],
+  ['Pull-up', 'PLU'],
+  ['Row'],
+  ['Run'],
+  ['Wall ball', 'WB'],
 ].each do |m|
   movement = Movement.new(name: m[0], abbreviation: m[1])
 
