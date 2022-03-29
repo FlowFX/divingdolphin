@@ -54,10 +54,6 @@ gem 'devise', '~> 4.8.1'
 # Performance monitoring
 gem 'newrelic_rpm', '~> 8.5.0'
 
-# Forms
-gem 'simple_form', '~> 5.1.0'
-gem 'simple_form-tailwind', '~> 0.1.1'
-
 # Views
 gem 'view_component', '~> 2.50.0'
 
