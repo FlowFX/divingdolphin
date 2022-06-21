@@ -71,7 +71,7 @@ group :development, :test do
   # Code linting
   gem 'rubocop', '~> 1.25.1', require: false
   gem 'rubocop-minitest', '~> 0.18.0', require: false
-  gem 'rubocop-rails', '~> 2.13.2', require: false
+  gem 'rubocop-rails', '~> 2.15.0', require: false
 
   # Code analysis
   gem 'brakeman', '~> 5.2.1', require: false
