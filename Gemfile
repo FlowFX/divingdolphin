@@ -59,7 +59,7 @@ gem 'simple_form', '~> 5.1.0'
 gem 'simple_form-tailwind', '~> 0.1.1'
 
 # Views
-gem 'view_component', '~> 2.50.0'
+gem 'view_component', '~> 2.74.1'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
