@@ -69,7 +69,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.2.0'
 
   # Code linting
-  gem 'rubocop', '~> 1.25.1', require: false
+  gem 'rubocop', '~> 1.48.1', require: false
   gem 'rubocop-minitest', '~> 0.18.0', require: false
   gem 'rubocop-rails', '~> 2.13.2', require: false
 
