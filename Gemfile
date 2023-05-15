@@ -52,7 +52,7 @@ gem 'dotenv-rails', '~> 2.7.2'
 gem 'devise', '~> 4.8.1'
 
 # Performance monitoring
-gem 'newrelic_rpm', '~> 8.5.0'
+gem 'newrelic_rpm', '~> 9.2.2'
 
 # Forms
 gem 'simple_form', '~> 5.1.0'
